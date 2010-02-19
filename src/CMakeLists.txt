@@ -15,7 +15,8 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 #Source Files
-set(Logover_SRC)
+set(Logover_SRC
+	logover.h logover.cpp)
 
 #Additional Options
 #option(DEBUG "Build Logover with Debugging code" ON)
@@ -35,5 +36,5 @@ set(LIBS ${LIBS} ${Boost_LIBRARIES})
 
 #Add Executable
 include_directories(${CMAKE_BINARY_DIR}/src)
-add_library ( Logover ${logover_SRC})
-target_link_libraries( logover ${LIBS})
+add_library ( Logover ${Logover_SRC})
+target_link_libraries( Logover ${LIBS})
