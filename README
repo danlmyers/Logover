@@ -1,0 +1,15 @@
+Logover is a C++ cross platform log file mechanism
+
+
+Libraries and Build Tools
+---------------------------------------
+Logover does use other libraries to make the tasks involved more seemless.
+Boost Libraries v1.42: http://www.boost.org/
+Cmake v2.8: http://www.cmake.org/
+
+Build
+---------------------------------------
+The proper way to build is to use an out of source build.  IE Logover/build using
+cmake.  Boost libraries is being built statically into the library unless otherwise
+specified.  If the boost libraries are not installed into the default locations
+then they will manually have to be added to cmake during configuration.
