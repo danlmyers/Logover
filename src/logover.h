@@ -17,7 +17,15 @@
 
 #ifndef LOGOVER_LOGOVER_H_
 #define LOGOVER_LOGOVER_H_
-
+#include "EventInt.h"
+namespace Logover {
+	
+#ifndef PROGRAM_NAME
+#define PROGRAM_NAME "Logover"
+#endif
+	
+	
+}
 
 
 #endif /* LOGOVER_H_ */

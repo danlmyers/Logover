@@ -14,3 +14,26 @@
  * You should have received a copy of the Lesser GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
+
+//Event Interface
+#ifndef LOGOVER_LOGINT_H_
+#define LOGOVER_LOGINT_H_
+#include <boost/lexical_cast.hpp>
+#include <boost/foreach.hpp>
+#include <string>
+#include <list>
+#include <iostream>
+#include "logover.h"
+#include "syslog.h" //this will need to be wrapped into a ifdef
+#include "ErrorHandle.h"
+
+namespace Logover{
+	class EventInt{
+	public:
+		EventInt(std::string);
+		virtual ~EventInt();
+	};
+
+
+}
+#endif /* LOGOVER_LOGINT_H_ */

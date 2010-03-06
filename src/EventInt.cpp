@@ -14,24 +14,13 @@
  * You should have received a copy of the Lesser GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
+#include "EventInt.h"
 
-//Log File Interface
-#ifndef LOGOVER_LOGINT_H_
-#define LOGOVER_LOGINT_H_
-#include <boost/filesystem.hpp>
-#include <boost/filesystem/fstream.hpp>
-#include <boost/lexical_cast.hpp>
-#include <boost/foreach.hpp>
-#include <string>
-#include <list>
-#include <iostream>
-#include <map>
-#include "ErrorHandle.h"
-
-namespace fs = boost::filesystem;
 namespace Logover{
-
-
-
+	EventInt::EventInt(std::string eveinput){
+		openlog(PROGRAM_NAME, LOG_PID, LOG_USER);
+		syslog(LOG_INFO, eveinput.c_str());
+		closelog();
+		
+	}
 }
-#endif /* LOGOVER_LOGINT_H_ */

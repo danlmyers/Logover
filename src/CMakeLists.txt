@@ -17,8 +17,8 @@
 #Source Files
 set(Logover_SRC
 	logover.h logover.cpp
-	ErrorHandle.h LogInt.cpp
-	LogInt.h)
+	ErrorHandle.h EventInt.cpp
+	EventInt.h)
 
 #VDConfig.h Creation
 #configure_file(${CMAKE_SOURCE_DIR}/src/VDconfig.h.cmake

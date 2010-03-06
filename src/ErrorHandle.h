@@ -28,14 +28,15 @@ namespace Logover{
 	namespace Error{
 
 		//Additional Error Information
-		typdef boost::error_info<struct tag_errno,int> errno_info; //General Error Number
-		typdef boost::error_info<struct tag_function,std::string> function_info; //Name of the function
-		typdef boost::error_info<struct tag_file_name,std::string> file_name_info; //File Name info
+		typedef boost::error_info<struct tag_errno,int> errno_info; //General Error Number
+		typedef boost::error_info<struct tag_function,std::string> function_info; //Name of the function
+		typedef boost::error_info<struct tag_file_name,std::string> file_name_info; //File Name info
 		
 		//Error Identifiers
-		struct General : virtual boost::exception, virtual std::exception;
-		struct File_Not_Found : virtual General;
-		struct File_IO : virtual General;
+		struct General : virtual boost::exception, virtual std::exception{}; //Not to be explicitly called
+		struct Log_File_Not_Found : virtual General{};
+		struct Log_File_IO : virtual General{};
+		struct Log_Event_Error : virtual General{};
 
 
 	}
