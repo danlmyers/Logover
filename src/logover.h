@@ -17,6 +17,7 @@
 
 #ifndef LOGOVER_LOGOVER_H_
 #define LOGOVER_LOGOVER_H_
+#include <iostream>
 #include "EventInt.h"
 namespace Logover {
 	
@@ -24,6 +25,11 @@ namespace Logover {
 #define PROGRAM_NAME "Logover"
 #endif
 	
+	class ConsoleLog{
+	public:
+		ConsoleLog(std::string);
+		virtual ~ConsoleLog();
+	};
 	
 }
 

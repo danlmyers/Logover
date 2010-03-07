@@ -16,3 +16,8 @@
  */
 
 #include "logover.h"
+namespace Logover{
+	ConsoleLog::ConsoleLog(std::string stinput){
+		std::cout << PROGRAM_NAME << ": " << stinput << std::endl;
+	}
+}

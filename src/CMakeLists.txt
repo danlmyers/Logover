@@ -35,5 +35,5 @@ set(LIBS ${LIBS} ${Boost_LIBRARIES})
 
 #Add Executable
 include_directories(${CMAKE_BINARY_DIR}/src)
-add_library ( Logover ${Logover_SRC})
+add_library ( Logover STATIC ${Logover_SRC})
 target_link_libraries( Logover ${LIBS})
