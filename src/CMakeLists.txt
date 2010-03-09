@@ -16,7 +16,7 @@
 
 #Source Files
 set(Logover_SRC
-	logover.h logover.cpp
+	Logover.h Logover.cpp
 	ErrorHandle.h EventInt.cpp
 	EventInt.h)
 
